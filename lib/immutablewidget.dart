@@ -12,12 +12,27 @@ class immutableWidget extends StatelessWidget {
           color: Colors.purple,
           child: Padding(
             padding: const EdgeInsets.all(40),
-            child: Container(
-              color: Colors.blue,
-            ),
+            child: showcontainer(),
           ),
         ),
       ) ,
+    );
+  }
+  Widget showcontainer(){
+    return Container(
+      decoration: const   BoxDecoration(
+        shape: BoxShape.circle,
+        gradient: RadialGradient(
+          colors: [
+            Colors.lightBlue,
+            Colors.lightGreen,
+            Colors.red,
+            Colors.white,
+          ],
+          center: Alignment(-0.3,0.75)
+        ),
+        boxShadow:[ BoxShadow(blurRadius: 20),],
+      ),
     );
   }
 }
