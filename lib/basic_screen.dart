@@ -1,3 +1,4 @@
+import 'package:cookbook/text_layout.dart';
 import 'package:flutter/material.dart';
 import 'immutablewidget.dart';
 class Basic extends StatelessWidget {
@@ -6,7 +7,6 @@ class Basic extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.cyan,
       appBar: AppBar(
         backgroundColor: Colors.indigo,
         // leading: const Icon(
@@ -20,10 +20,15 @@ class Basic extends StatelessWidget {
           )
         ],
       ),
-      body: const Center(
-        child: AspectRatio(
-          aspectRatio: 1.0,
-          child: immutableWidget(),
+      body:  Center(
+        child: Column(
+          children:const [
+            AspectRatio(
+              aspectRatio: 1.0,
+              child: immutableWidget(),
+            ),
+            Textlayout(),
+          ],
         ),
 
       ),
